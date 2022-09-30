@@ -1,0 +1,90 @@
+.tasks {
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        color: #64C4ED;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #F2F2F2;
+        display: flex;
+        align-items: center;
+
+        &:hover &-edit{
+            opacity: .2;
+            &:hover {
+                opacity: .8;
+            }
+        }
+
+        &-edit {
+            opacity: 0;
+            cursor: pointer;
+            margin-left: 15px;
+        }
+    }
+
+    &__list {
+        margin-top: 30px;
+
+        &-item {
+            display: flex;
+            align-items: center;
+
+            p {
+                margin-left: 15px;
+                font-size: 16px;
+                line-height: 19px;
+                color: #000000;
+            }
+        }
+    }
+}
+
+.checkbox {
+    label {
+        border: 2px solid #E8E8E8;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        transition: background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            opacity: 0;
+        }
+    }
+
+    label:hover{
+        background: #F2F2F2;
+        border: 2px solid #F2F2F2;
+
+        svg {
+            opacity: 1;
+            path {
+                stroke: #B3B3B3;
+            }
+        }
+    }
+
+    input {
+        display: none;
+    }
+
+    input:checked + label {
+        background: #4DD599;
+        border: 2px solid #4DD599;
+
+        svg {
+            opacity: 1;
+            path {
+              stroke: #fff;
+            }
+          }
+    }
+}

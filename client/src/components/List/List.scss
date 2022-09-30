@@ -1,0 +1,76 @@
+.list{
+    $self: &;
+
+    margin-bottom: 30px;
+
+    &__add-button {
+        svg {
+            path {
+                stroke: #868686;
+            }
+        }
+
+        span {
+            color: #767676;
+        }
+
+        &:hover {
+            svg {
+                path {
+                    stroke: #000;
+                }
+            }
+    
+            span {
+                color: #000;
+            }
+        } 
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        padding: 10px 12px;
+        cursor: pointer;
+
+        &:hover #{$self}__remove-icon{
+            opacity: .2;
+        }
+
+        #{$self}__remove-icon {
+            opacity: 0;
+    
+            &:hover {
+                opacity: .8;
+            }
+        }
+
+        span { 
+            flex: 1;
+        }
+
+        &:hover{
+            background: rgba(255, 255, 255, .5)
+        }
+
+        &.active{
+            background: #fff;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.04);
+            border-radius: 4px;
+        }
+        
+        i {
+            margin-right: 8px;
+            display: inline-flex;
+
+            svg {
+                opacity: .6;
+            }
+        }
+
+        .badge{
+            position: relative;
+            left: 5px;
+        }
+    }
+}
